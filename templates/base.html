@@ -1,0 +1,20 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}NMAP Test{% endblock %}
+
+{% block navbar %}
+<nav class="navbar navbar-fixed-top">
+
+</nav>
+{% endblock %}
+
+{% block content %}
+  {{ wtf.quick_form(form) }}
+  {% if ios != None %}
+    <br />
+	{% for r in ios %}
+	  {{ ios[r] }} <br />
+	{% endfor %}
+  {% endif %}
+{% endblock %}
