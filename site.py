@@ -34,6 +34,9 @@ def main():
 			(out, err) = proc.communicate()
 
 			out = out.split('\n')
+			
+			ssh = None
+			telnet = None
 
 			for service in out:
 				if '22' and 'ssh' in service:
